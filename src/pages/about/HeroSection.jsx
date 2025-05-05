@@ -14,7 +14,7 @@ function HeroSection({ t, currentLanguage, data }) {
           <h1 className="text-3xl md:text-5xl font-semibold text-gray-900 dark:text-gray-200">
             {name}
           </h1>
-          <p className="text-gray-700 dark:text-my-light  text-base md:text-xl w-1/2 mt-8">
+          <p className="text-gray-700 dark:text-my-light  text-base md:text-xl md:w-1/2 mt-8">
             {desc}
           </p>
         </div>

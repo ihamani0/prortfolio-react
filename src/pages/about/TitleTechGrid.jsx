@@ -32,7 +32,7 @@ const TitleTechGrid = React.memo(({ title }) => {
           rotate: -2,
         }}
         className="relative font-bold text-transparent bg-clip-text bg-gradient-to-r dark:from-gray-100 dark:to-gray-700  from-gray-700 to-gray-500
-               text-2xl md:text-3xl lg:text-4xl w-fit"
+               text-xl md:text-3xl lg:text-4xl w-fit"
       >
         {title}
       </motion.h1>

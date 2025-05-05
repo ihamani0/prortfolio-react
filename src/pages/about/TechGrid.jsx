@@ -57,15 +57,15 @@ const TechGrid = React.memo(({ Teches }) => {
           }}
           whileTap={{ scale: 0.95 }}
         >
-          <div className="flex flex-col items-center p-6 md:p-8">
+          <div className="flex flex-col items-center p-4 md:p-8">
             {" "}
             <motion.img
-              className="w-16 h-16 mb-4 rounded-full shadow-md object-cover"
+              className="w-12 h-12 md:w-16 md:h-16 mb-4 rounded-full shadow-md object-cover"
               src={tech.svg}
               alt="Profile image"
               whileHover={{ scale: 1.05 }}
             />
-            <h5 className="mb-1 text-xl font-semibold text-gray-900 dark:text-white">
+            <h5 className="mb-1 text-base md:text-xl font-semibold text-gray-900 dark:text-white">
               {" "}
               {/* Increased font size and weight */}
               {tech.name}
@@ -73,7 +73,7 @@ const TechGrid = React.memo(({ Teches }) => {
             {/* Optional: Add a subtitle or role */}
             {/* <span className="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span> */}
             <div className="mt-4 text-center">
-              <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed">
                 {" "}
                 {/* Slightly larger text, adjusted leading */}
                 {tech[`desc_${i18n.language}`]}

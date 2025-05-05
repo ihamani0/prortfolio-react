@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useEffect } from "react";
 import PatternColumn from "../../ui/PatternColumn";
 import PatternRow from "../../ui/PatternRow";
 
@@ -24,11 +24,12 @@ import FormationList from "./FormationList";
 import { Link } from "react-router-dom";
 import { useResume } from "../../hooks/useResume";
 import Spinner from "../../ui/Spinner";
+import ErrorMessage from "../../components/ErrorMessage";
+import EmptyState from "../../components/EmptyState";
 
 function Resume() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
-  const { resumePage } = useDataContext();
 
   const { data, isLoading, error } = useResume(currentLang);
 
@@ -42,10 +43,14 @@ function Resume() {
     ? resume.social_media_links[0]
     : resume.social_media_links;
 
-  console.log("--- resume ---:", resume);
+  useEffect(() => {
+    document.title = "HAMANI || Resume";
+  }, []);
 
   if (isLoading) return <Spinner />;
-  if (error) return <div>Error: {error.message}</div>;
+  if (error) return <ErrorMessage message={error?.message} />;
+  // Add specific check for empty data if needed
+  if (!data) return <EmptyState />;
 
   return (
     <div className="min-h-screen rtl:font-mada">
@@ -92,7 +97,7 @@ function Resume() {
             </div>
 
             <div className="border-s-2 border-s-gray-700 dark:border-s-gray-200 h-full p-6 ">
-              <ul className="text-gray-700 dark:text-gray-200 space-y-3">
+              <ul className="text-gray-700 dark:text-gray-200 space-y-5">
                 <li className="flex">
                   <Phone size={20} />{" "}
                   <span className="ms-2 text-sm md:text-base">
@@ -148,14 +153,14 @@ function Resume() {
 
         {/* -----------My Picter  Section------------------------ */}
 
-        <div className="flex">
+        <div className="flex flex-col lg:flex-row">
           <div
             className="border-x border-b border-gray-950/15 dark:border-my-light/5  not-md:border-0 md:border-b-0 p-4 w-full
-            flex justify-center items-center
+            flex  justify-center items-center
           "
           >
             <motion.img
-              className="w-30 h-30 md:w-64 md:h-64 rounded-full ring-4 ring-gray-300/50 dark:ring-gray-600/50 object-cover shadow"
+              className="w-46 h-46 md:w-64 md:h-64 rounded-full ring-4 ring-gray-300/50 dark:ring-gray-600/50 object-cover shadow"
               src={resume.profile_url}
               alt="Avatar"
               whileHover={{
@@ -167,7 +172,7 @@ function Resume() {
           </div>
           <PatternRow className="border-s-2 border-s-gray-300/50 dark:border-s-gray-600/50 p-4 ">
             <h1
-              className="text-2xl md:text-4xl lg:text-7xl font-semibold
+              className="text-3xl md:text-4xl lg:text-7xl font-semibold
                 bg-clip-text text-transparent
                 bg-gradient-to-r dark:from-gray-200 dark:to-gray-600
                 from-gray-900 to-gray-400 "
@@ -182,7 +187,7 @@ function Resume() {
 
         <PatternRow>
           <div className="flex flex-col ps-4 py-6">
-            <h1 className="border-s-3 border-s-gray-700 dark:border-s-gray-200 text-5xl text-gray-700 dark:text-gray-200 ps-2 font-semibold">
+            <h1 className="border-s-3 border-s-gray-700 dark:border-s-gray-200  text-gray-700 dark:text-gray-200 ps-2 font-semibold text-3xl md:text-4xl lg:text-5xl">
               {t("formation")}
             </h1>
 
@@ -205,7 +210,7 @@ function Resume() {
           "
           >
             <h1
-              className="text-xl md:text-6xl font-semibold  bg-clip-text text-transparent
+              className="text-4xl md:text-6xl font-semibold  bg-clip-text text-transparent
                 bg-gradient-to-r dark:from-gray-200 dark:to-gray-600
                 from-gray-900 to-gray-400 border-s-4 border-s-gray-700 dark:border-s-gray-200   px-4 py-1  "
             >
@@ -223,7 +228,7 @@ function Resume() {
             flex justify-center items-center
           "
           >
-            <h1 className="text-xl md:text-3xl font-semibold  border-s-4 border-s-gray-700 dark:border-s-gray-200 px-2 py-1  text-gray-700 dark:text-gray-200  ">
+            <h1 className="md:text-3xl font-semibold  border-s-4 border-s-gray-700 dark:border-s-gray-200 px-2 py-1  text-gray-700 dark:text-gray-200  ">
               {t("skills")}
             </h1>
           </div>
@@ -256,11 +261,11 @@ function Resume() {
 
         <div className="flex flex-col lg:flex-row gap-5  ">
           <PatternRow className="ps-3 py-1 flex items-center">
-            <div className="w-2/4 py-3 px-3 text-gray-700  font-semibold dark:text-gray-200  border-s-2 border-gray-700/50 dark:border-s-gray-200">
-              <h1 className="text-gray-700  font-semibold dark:text-gray-200 text-lg lg:text-2xl">
+            <div className="md:w-2/4 py-3 px-3 text-gray-700  font-semibold dark:text-gray-200  border-s-2 border-gray-700/50 dark:border-s-gray-200">
+              <h1 className="text-gray-700  font-semibold dark:text-gray-200 text-base lg:text-2xl">
                 {t("Cen_of_interest")}
               </h1>
-              <div className="ps-3 text-sm md:text-base  ">
+              <div className="ps-3 text-xs md:text-base  ">
                 {resume.centres.map((centre, index) => (
                   <p className="flex items-center my-3 " key={index}>
                     <Circle size={10} />
@@ -273,19 +278,19 @@ function Resume() {
             </div>
           </PatternRow>
           <div className="md:w-2/4 ms-3 px-4 text-gray-700  font-semibold dark:text-gray-200  border-s-2 border-gray-700/50 dark:border-s-gray-200">
-            <h1 className="text-gray-700  font-semibold dark:text-gray-200 text-2xl">
+            <h1 className="text-gray-700  font-semibold dark:text-gray-200 text-base">
               {t("lang")}
             </h1>
-            <div className="ps-3 text-sm md:text-base">
-              
-            {resume.language.map((centre, index) => (
-                  <p className="flex items-center my-3 " key={index}>
-                    <Circle size={10} />
-                    <span className="ms-2">
-                      {centre[`title_${i18n.language}`]} : {centre[`desc_${i18n.language}`]}
-                    </span>
-                  </p>
-                ))}
+            <div className="ps-3 text-xs md:text-base">
+              {resume.language.map((centre, index) => (
+                <p className="flex items-center my-3 " key={index}>
+                  <Circle size={10} />
+                  <span className="ms-2">
+                    {centre[`title_${i18n.language}`]} :{" "}
+                    {centre[`desc_${i18n.language}`]}
+                  </span>
+                </p>
+              ))}
             </div>
           </div>
         </div>

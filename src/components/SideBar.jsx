@@ -9,16 +9,13 @@ import { NavLink } from "react-router-dom";
 import { useSideBar } from "../hooks/useSideBar";
 import Spinner from "../ui/Spinner";
 
-
 function SideBar({ isSidebarOpen, closeSidebar }) {
   const { theme, toggleTheme } = useThemeContext();
 
   const { t, i18n } = useTranslation();
 
-  const currentLanguage = i18n.language
+  const currentLanguage = i18n.language;
   const { data, isLoading, error } = useSideBar(i18n.language);
-
- 
 
   const navItems = [
     { name: "AboutMe", id: "about", to: "/", icon: <User size={20} /> },
@@ -80,6 +77,7 @@ function SideBar({ isSidebarOpen, closeSidebar }) {
         <ul className="space-y-3  md:font-medium my-3">
           {navItems.map((item) => (
             <NavLink
+              onClick={closeSidebar}
               key={item.id}
               to={item.to}
               className={({ isActive }) =>

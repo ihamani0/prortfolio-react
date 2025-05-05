@@ -1,8 +1,8 @@
 import React from "react";
 
-function BackgroundDeco() {
+function BackgroundDeco({className}) {
   return (
-    <>
+    <div className={`${className}`}>
       <div className="absolute top-10 left-20 animate-float">
         <img src="/vite.svg" alt="Laravel" className="w-16 h-16 opacity-40 " />
       </div>
@@ -15,7 +15,7 @@ function BackgroundDeco() {
       <div className="absolute top-150 right-200 animate-float-reverse">
         <img src="/git.svg" alt="Node.js" className="w-16 h-16 opacity-50" />
       </div>
-    </>
+    </div>
   );
 }
 

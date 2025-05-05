@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useEffect } from "react";
 import PatternRow from "../../ui/PatternRow";
 import PatternDots from "../../ui/PatternDots";
 import ContactForm from "./ContactForm";
@@ -23,6 +23,11 @@ function ContacPage() {
   const { data, error, isLoading } = useContact();
   const { email, phone, location } = data?.contact?.[0] || {};
   const socialMedia = data?.resume?.[0]?.social_media_links?.[0] || {};
+
+
+    useEffect(() => {
+        document.title = "HAMANI || Contact"
+    }, [])
 
   if (isLoading) return <Spinner />;
   if (error) return <ErrorMessage message={error?.message} />;

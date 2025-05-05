@@ -7,7 +7,7 @@ const TimeLine = React.memo(({ timeLine, currentLanguage }) => {
     <div className="w-full  grid-cols-1 lg:grid-cols-[17%_1fr_17%] grid  gap-y-0 md:gap-6 md:gap-x-4 lg:gap-8">
       <PatternColumn className="w-full not-lg:hidden  " />
 
-      <motion.div className="flex justify-center items-center   mt-2">
+      <motion.div className="flex justify-center items-center ps-6  mt-2">
         <ol className="relative border-s border-gray-200 dark:border-gray-700 px-4">
           {timeLine.map((item, index) => (
             <motion.li className="mb-10 ms-4" key={index}>
@@ -27,10 +27,10 @@ const TimeLine = React.memo(({ timeLine, currentLanguage }) => {
                 <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
                   {item.year}
                 </time>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                <h3 className="text-base md:text-lg font-semibold text-gray-900 dark:text-white">
                   {item[`title_${currentLanguage}`]}
                 </h3>
-                <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+                <p className="mb-4 text-sm md:text-base font-normal text-gray-500 dark:text-gray-400">
                   {item[`desc_${currentLanguage}`]}
                 </p>
               </motion.div>

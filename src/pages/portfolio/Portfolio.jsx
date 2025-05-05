@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useEffect } from "react";
 import PatternColumn from "../../ui/PatternColumn";
 import PatternRow from "../../ui/PatternRow";
 import ProjectCard from "./ProjectCard";
@@ -24,6 +24,10 @@ function Portfolio() {
   const desc = data?.[`desc_${currentLanguage}`] || "";
 
   const projects = data?.projects || [];
+
+  useEffect(() => {
+    document.title = "HAMANI || Portfolio";
+  }, []);
 
   if (isLoading) return <Spinner />;
   if (error) return <ErrorMessage message={error?.message} />;

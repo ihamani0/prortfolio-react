@@ -11,7 +11,7 @@ import TimeLine from "./TimeLine";
 
 import { useAboutMe } from "../../hooks/useAboutMe";
 import Spinner from "../../ui/Spinner";
-import { useMemo } from "react";
+import { useMemo , useEffect } from "react";
 import HeroSection from "./HeroSection";
 import ErrorMessage from "../../components/ErrorMessage";
 import EmptyState from "../../components/EmptyState";
@@ -37,6 +37,10 @@ function AboutMe() {
   }, [data?.tech]);
 
 
+  useEffect(() => {
+      document.title = "HAMANI || About Me"
+  }, [])
+  
   
   if (isLoading) return <Spinner />;
   if (error) return <ErrorMessage message={error?.message} />;
@@ -45,7 +49,7 @@ function AboutMe() {
 
   return (
     <div className="min-h-screen relative rtl:font-mada">
-      <BackgroundDeco />
+      <BackgroundDeco className='not-md:hidden' />
 
       <section className="flex flex-col">
         {/* <PatternRow className="hidden md:block h-15 " ></PatternRow> */}
@@ -97,7 +101,7 @@ function AboutMe() {
         {/* ----------------------Tech TITLE ----------------------------------------------------------- */}
         <div className="border-s-4 dark:border-gray-100 h-10 lg:h-25  border-gray-800 flex items-center ps-4 ">
           <div className="">
-            <h1 className="font-semibold text-lg md:text-3xl lg:text-6xl text-gray-800 dark:text-gray-100 me-3">
+            <h1 className="font-semibold  text-3xl lg:text-6xl text-gray-800 dark:text-gray-100 me-3">
               {t("technologies")}
             </h1>
           </div>

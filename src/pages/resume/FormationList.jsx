@@ -10,17 +10,17 @@ function FormationList({ formation }) {
   // const { currentLanguage } = useGlobalParam();
 
   return (
-    <div className="px-6 py-6 my-6 ">
+    <div className="lg:px-6 lg:py-6 my-6 ">
       {/* title */}
-      <div className="flex justify-between items-center ">
-        <h3 className="text-lg md:text-2xl flex items-center font-semibold text-gray-700 dark:text-gray-200">
+      <div className="flex flex-col md:flex-row justify-between items-center space-y-2">
+        <h3 className="text-base md:text-2xl flex items-center font-semibold text-gray-700 dark:text-gray-200">
           <Star size={20} />{" "}
-          <span className="ms-2">{formation[`title_${currentLanguage}`]}</span>
+          <span className="ms-2 ">{formation[`title_${currentLanguage}`]}</span>
         </h3>
-        <h4 className="text-gray-800 dark:text-gray-200 text-sm md:text-base font-semibold    ">
+        <h4 className="text-gray-800 dark:text-gray-200 text-xs md:text-base font-semibold    ">
           {formation[`location_${currentLanguage}`]}
         </h4>
-        <h4 className="text-gray-800 dark:text-gray-200 border-s-2 border-s-gray-800 dark:border-s-gray-200 text-sm md:text-base ps-3">
+        <h4 className="text-gray-800 dark:text-gray-200 border-s-2 border-s-gray-800 dark:border-s-gray-200 text-xs md:text-base ps-3">
           {formation.date_range}
         </h4>
       </div>

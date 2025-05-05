@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useEffect } from "react";
 
 import PatternDots from "../../ui/PatternDots";
 import PatternColumn from "../../ui/PatternColumn";
@@ -27,7 +27,9 @@ function ProjectReview() {
 
   const projectDetails = data?.project_trans[0] || "";
 
-
+  useEffect(() => {
+    document.title = "Portfolio || Project Review";
+  }, []);
 
   if (isLoading) return <Spinner />;
   if (error) return <ErrorMessage message={error?.message} />;
@@ -37,7 +39,6 @@ function ProjectReview() {
   return (
     <div className="min-h-screen">
       <section className="flex flex-col">
-        
         <div className="grid grid-cols-1 md:grid-cols-[7%_1fr_7%] ">
           <PatternColumn className="" />
           <PatternDots className="">
