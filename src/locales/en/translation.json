@@ -1,0 +1,79 @@
+{
+  "welcomeMessage": "Hello I'am",
+  "changeTheme": "Change Theme",
+  "changeLanguage": "Change Language",
+
+
+
+  "experince": "Experince",
+  "education": "Education",
+  "year": "Year",
+  "univ": "Univ Farhat Abbase",
+  "master": "Master Degree",
+  "dev": "Development",
+
+  "Get_To_Know_More": "Get To Know More",
+
+
+
+  "front_end": "Front-End",
+  "back_end": "Back-End",
+  "database": "Databases",
+
+  "other": "Other",
+
+  "Work_Together": "Let’s Work Together on Your Next Project",
+  "Work_Together_btn": "Let’s Get in Touch",
+
+  "AboutMe": "About Me",
+  "Resume": "Resume",
+  "Portfolio": "Portfolio",
+  "Contact": "Contact",
+
+  "formation": "FORMATION",
+  "exp": "EXPERIENCES",
+  "skills": "SKILLS",
+
+  "Cen_of_interest": "CENTERS OF INTEREST",
+  "lang": "LANGUES",
+
+  "fr": "Francais",
+  "en": "English",
+  "ar": "Arabic",
+
+  "desc_resume" : "This resume highlights my journey, skills, and the value I bring to your team. Let’s connect and discuss how I can contribute to your next project!",
+  "download_resume": "DOWNLOAD RESUME",
+
+  "check_portfolio": "OverView of my projects",
+  "check_portfolio_btn": "View Portfolio",
+
+  "my_portfolio": "My Portfolio",
+
+  "all_rights_resrved": "All Rights Reserved.",
+  "read_more": "Read more",
+
+  "project_review": "Project Review",
+  "services": "Service",
+  "preview": "Preview",
+  "github_link": "Github Link",
+  "technologies": "Technologies",
+  "project_overview": "Project Overview",
+  "project_features": "Project Features",
+
+  "desc_contact_email": "Interested in hiring me for your project or just want to say hi? You can fill in the contact form below or send me an email to",
+  "desc_contact_social": "Want to get connected? Follow me on the social channels below.",
+  "contact_details": "Contact Details",
+  "contact_Phone": "Phone",
+  "contact_location": "Location",
+  "contact_email": "Email",
+  "get_into_touch": "Get In Touch",
+  "get_into_touch_desc": "Have a project in mind or need assistance? Feel free to reach out. Let's collaborate to bring your ideas to life and create somethingamazing together.",
+
+  "conatc_first_name": "First name",
+  "conatc_last_name": "Last name",
+  "conatc_your_message": "Your message",
+
+  "optional": "optional",
+  "send": "send"
+
+}

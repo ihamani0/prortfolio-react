@@ -1,0 +1,72 @@
+{
+  "welcomeMessage": "Bonjour Je suis",
+  "changeTheme": "Changer de thème",
+  "changeLanguage": "Changer de langue",
+
+  "experince": "expérience",
+  "education": "éducation",
+  "year": "année",
+  "univ": "Univ Farhat Abbase",
+  "master": "Master",
+  "dev": "Développement",
+
+  "Get_To_Know_More": "En Savoir Plus",
+
+  "front_end": "Front-End",
+  "back_end": "Back-End",
+  "database": "Bases De Données",
+  "other": "Autre",
+
+  "Work_Together": "Travaillons ensemble sur votre prochain projet",
+  "Work_Together_btn": "Contactez-nous",
+
+  "AboutMe": "À propos de moi",
+  "Resume": "CV",
+  "Portfolio": "Portfolio",
+  "Contact": "Contact",
+
+  "formation": "FORMATION",
+  "exp": "EXPÉRIENCES",
+  "skills": "compétences",
+
+  "Cen_of_interest": "CENTRES D'INTÉRÊT",
+  "lang": "LANGUES",
+
+  "fr": "Français",
+  "en": "Anglais",
+  "ar": "arabe",
+
+  "desc_resume": "Ce CV met en valeur mon parcours, mes compétences et la valeur que j'apporte à votre équipe. Discutons ensemble de ma contribution à votre prochain projet !",
+  "download_resume": "TÉLÉCHARGER CV",
+
+  "check_portfolio": "Aperçu de mon projets",
+  "check_portfolio_btn": "Voir le portfolio",
+
+  "my_portfolio": "Mon portfolio",
+
+  "all_rights_resrved": "Tous droits réservés.",
+  "read_more": "En savoir plus",
+
+  "project_review": "Avis sur le projet",
+  "services": "Service",
+  "preview": "Aperçu",
+  "github_link": "Lien GitHub",
+  "technologies": "Technologies",
+  "project_overview": "Aperçu du projet",
+  "project_features": "Fonctionnalités du projet",
+
+  "desc_contact_email": "Intéressé de me recruter pour votre projet ou simplement envie de dire bonjour ? Vous pouvez remplir le formulaire de contact ci-dessous ou m'envoyer un e-mail à",
+  "desc_contact_social": "Souhaitez-vous vous connecter ? Suivez-moi sur les réseaux sociaux ci-dessous.",
+  "contact_details": "Coordonnées",
+  "contact_Phone": "Téléphone",
+  "contact_location": "Emplacement",
+  "contact_email": "E-mail",
+  "get_into_touch": "Contactez-moi",
+  "get_into_touch_desc": "Avez-vous un projet en tête ou avez-vous besoin d'aide ? N'hésitez pas à me contacter. Collaborons pour concrétiser vos idées et créer quelque chose de formidable ensemble.",
+  "conatc_first_name": "Prénom",
+  "conatc_last_name": "Nom de famille",
+  "conatc_your_message": "Votre message",
+
+  "optional": "optional",
+  "send": "envoyer"
+}
