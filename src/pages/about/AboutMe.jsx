@@ -16,7 +16,7 @@ import HeroSection from "./HeroSection";
 import ErrorMessage from "../../components/ErrorMessage";
 import EmptyState from "../../components/EmptyState";
 import BackgroundDeco from "../../ui/BackgroundDeco";
-import TechSection from "./TechSEction";
+import TechSection from "./TechSection";
 import StateSecetion from "./StateSecetion";
 import WorkTogether from "../../components/workTogether";
 
