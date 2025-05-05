@@ -18,7 +18,7 @@ import EmptyState from "../../components/EmptyState";
 import BackgroundDeco from "../../ui/BackgroundDeco";
 import TechSection from "./TechSection";
 import StateSecetion from "./StateSecetion";
-import WorkTogether from "../../components/workTogether";
+import WorkTogether from "../../components/WorkTogether";
 
 function AboutMe() {
   const { theme } = useThemeContext();

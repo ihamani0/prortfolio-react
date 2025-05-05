@@ -1,19 +1,15 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from "react";
-import PatternColumn from "../../ui/PatternColumn";
-import PatternRow from "../../ui/PatternRow";
 import ProjectCard from "./ProjectCard";
 import PatternDots from "../../ui/PatternDots";
 import { useTranslation } from "react-i18next";
-import { Link, Outlet } from "react-router-dom";
 import { motion } from "motion/react";
-import { useDataContext } from "../../hooks/useGlobalParam";
 import { usePortfolio } from "../../hooks/usePortfolio";
 import Spinner from "../../ui/Spinner";
 import ErrorMessage from "../../components/ErrorMessage";
 import EmptyState from "../../components/EmptyState";
 import HeroSection from "./HeroSection";
-import WorkTogether from "../../components/workTogether";
+import WorkTogether from "../../components/WorkTogether";
 
 function Portfolio() {
   const { t, i18n } = useTranslation();
