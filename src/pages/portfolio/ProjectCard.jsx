@@ -20,7 +20,7 @@ function ProjectCard({ project }) {
         transition={{ duration: 0.3 }}
       >
         <img
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full  object-contain lg:object-cover"
           src={project.publicProjectUrl}
           alt="Project Cover"
         />

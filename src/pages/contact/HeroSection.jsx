@@ -4,20 +4,21 @@ import IconSocialMedia from "../../ui/IconSocialMedia";
 
 function HeroSection({
   t,
-  socialMedia: { email, github, facebook, instagram, twitter_x, linkidin },
+  socialMedia: { github, facebook, instagram, twitter_x, linkidin },
+  email,
 }) {
   return (
-    <PatternRow className="my-5 py-6 ">
-      <div className="flex flex-col items-center space-y-4 max-w-3xl mx-auto">
+    <PatternRow className="my-5 py-6 px-4 ">
+      <div className="flex flex-col items-center space-y-4  ">
         <h1 className="text-7xl text-gray-800 dark:text-gray-200 font-semibold font-dancing-script text-center rtl:font-mada">
           {t("Contact")}
         </h1>
         <p className="text-gray-600 dark:text-gray-200 text-sm md:text-base text-center">
-          {t("desc_contact_email")}
+          {t("desc_contact_email")}{" "}
           <a href={`mailto:${email}`} className="text-orange-600 ">
-            {" "}
             {email}
           </a>{" "}
+          <br />
           {t("desc_contact_social")}
         </p>
         <div className="flex items-center justify-center gap-10">

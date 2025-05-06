@@ -26,25 +26,25 @@ function ContactDetails({ t, phone, email, location }) {
         transition={{ delay: 0.3, duration: 0.3, ease: "easeOut" }}
       >
         <div className="border-s-4 border-s-gray-700 px-3 py-4 dark:border-s-gray-200 flex items-center text-gray-700 dark:text-gray-100/80 ">
-          <Phone size={35} />
+          <Phone />
           <div className="flex flex-col ms-3">
-            <p>{t("contact_Phone")}</p>
+            <p className="font-semibold">{t("contact_Phone")}</p>
             <p>{phone}</p>
           </div>
         </div>
 
         <div className="border-s-4 border-s-gray-700 px-3 py-4 dark:border-s-gray-200 flex items-center text-gray-700 dark:text-gray-100/80 ">
-          <LocateFixedIcon size={35} />
+          <LocateFixedIcon />
           <div className="flex flex-col ms-3">
-            <p>{t("contact_location")}</p>
+            <p className="font-semibold">{t("contact_location")}</p>
             <p>{location}</p>
           </div>
         </div>
 
-        <div className="border-s-4 border-s-gray-700 px-3 py-4 dark:border-s-gray-200 flex items-center text-gray-700 dark:text-gray-100/80 ">
-          <Mail size={35} />
+        <div className="border-s-4 border-s-gray-700 px-3 py-4 dark:border-s-gray-200 flex items-center text-gray-700 dark:text-gray-100/80 text-base   ">
+          <Mail />
           <div className="flex flex-col ms-3">
-            <p>{t("contact_email")}</p>
+            <p className="font-semibold">{t("contact_email")}</p>
             <p>{email}</p>
           </div>
         </div>

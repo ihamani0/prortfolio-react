@@ -37,7 +37,7 @@ function ProjectReview() {
   if (!data) return <EmptyState />;
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen rtl:font-mada">
       <section className="flex flex-col">
         <div className="grid grid-cols-1 md:grid-cols-[7%_1fr_7%] ">
           <PatternColumn className="" />
@@ -57,7 +57,7 @@ function ProjectReview() {
               <div className="w-full flex flex-col-reverse md:flex-row  items-center gap-20 ">
                 <div className="flex flex-col  w-full space-y-2">
                   <h1
-                    className="text-5xl md:text-6xl font-semibold text-gray-700 dark:text-gray-200 text-start
+                    className="text-5xl md:text-6xl font-semibold text-gray-700 dark:text-gray-200 text-center lg:text-start
                       rtl:font-mada"
                   >
                     {data?.title}
@@ -108,7 +108,7 @@ function ProjectReview() {
                   </div>
                 </div>
                 <motion.div
-                  className="relative h-100 w-full overflow-hidden rounded-lg shadow-lg"
+                  className="relative h-100 w-full overflow-hidden rounded-lg shadow-lg not-md:hidden"
                   whileHover={{ scale: 0.95 }} // Zoom effect on hover
                   transition={{ duration: 0.3 }}
                 >
@@ -126,11 +126,11 @@ function ProjectReview() {
                   <CodeXml /> <span className="ms-2">{t("technologies")}</span>
                 </h1>
 
-                <div className="felx space-x-2 gap-1">
+                <div className="flex flex-wrap space-x-2 gap-1">
                   {techProjects.map((tech) => (
                     <span
                       key={tech.id}
-                      className="bg-gray-300 text-gray-800 text-base  me-2.5 px-3.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+                      className="bg-gray-300 text-gray-800 text-sm  me-2.5 px-2 md:px-3.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
                     >
                       {tech.name}
                     </span>
@@ -142,10 +142,10 @@ function ProjectReview() {
                 <div className="w-full"></div>
 
                 <div className="w-full flex-col justify-start space-y-2">
-                  <h1 className=" text-gray-700 dark:text-gray-200 text-xl md:text-3xl font-semibold text-start">
+                  <h1 className=" text-gray-700 dark:text-gray-200 text-2xl md:text-3xl font-semibold lg:text-start">
                     {t("project_overview")}
                   </h1>
-                  <p className="text-gray-600 dark:text-gray-200 text-md md:text-lg text-start">
+                  <p className="text-gray-600 dark:text-gray-200 text-sm md:text-lg text-start  whitespace-pre-line ">
                     {projectDetails[`project_overview_${currentLanguage}`]}
                   </p>
                 </div>
@@ -153,10 +153,10 @@ function ProjectReview() {
 
               <div className="text-gray-200 w-full flex flex-col md:flex-row items-center my-4 md:my-0 ">
                 <div className="w-full flex-col justify-start space-y-2">
-                  <h1 className=" text-gray-700 dark:text-gray-200 text-xl md:text-3xl font-semibold text-start">
+                  <h1 className=" text-gray-700 dark:text-gray-200 text-xl md:text-3xl font-semibold lg:text-start">
                     {t("project_features")}
                   </h1>
-                  <div className="text-gray-600 dark:text-gray-200 text-md md:text-lg  text-start">
+                  <div className="text-gray-600 dark:text-gray-200 text-md md:text-lg text-start  whitespace-pre-line ">
                     {projectDetails[`project_features_${currentLanguage}`]}
                   </div>
                 </div>

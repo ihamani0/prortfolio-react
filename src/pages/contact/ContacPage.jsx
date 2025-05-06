@@ -24,10 +24,9 @@ function ContacPage() {
   const { email, phone, location } = data?.contact?.[0] || {};
   const socialMedia = data?.resume?.[0]?.social_media_links?.[0] || {};
 
-
-    useEffect(() => {
-        document.title = "HAMANI || Contact"
-    }, [])
+  useEffect(() => {
+    document.title = "HAMANI || Contact";
+  }, []);
 
   if (isLoading) return <Spinner />;
   if (error) return <ErrorMessage message={error?.message} />;
@@ -36,11 +35,12 @@ function ContacPage() {
 
   return (
     <div className="min-h-screen relative rtl:font-mada">
-      <BackgroundDeco />
+
+
       <section className="flex flex-col">
         <div className="my-10"></div>
 
-        <HeroSection t={t} socialMedia={socialMedia} />
+        <HeroSection t={t} socialMedia={socialMedia} email={email} />
 
         <div className="my-15"></div>
 
@@ -60,7 +60,7 @@ function ContacPage() {
             <h1 className=" text-lg md:text-3xl lg:text-6xl font-semibold text-gray-700 dark:text-gray-200">
               {t("get_into_touch")}
             </h1>
-            <p className="text-gray-900 dark:text-gray-200 w-1/2 mt-3">
+            <p className="text-gray-900 dark:text-gray-200 md:w-1/2 mt-3">
               {t("get_into_touch_desc")}
             </p>
           </motion.div>
